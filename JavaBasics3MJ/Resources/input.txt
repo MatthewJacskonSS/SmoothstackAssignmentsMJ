@@ -1,0 +1,13 @@
+Input file for testing
+
+
+.
+
+ハングルはテキストを削除します
+
+한글이 텍스트를 껐다
+
+But can it count e now
+
+€
+€
