@@ -8,14 +8,14 @@ public class PerformOperation{
 		Integer i = 1;
 		String output = null;
 		
-		System.out.println(i -> Operations.isOdd{
+		System.out.println(i -> Operations.isOdd(i)){
 			if (a%2 == 0) {
 				System.out.println("even");
 				return "even";
 			}
 				System.out.println("odd");
 				return "odd";
-		};
+		});
 		
 		// String output = odd(i).toString;
 	}

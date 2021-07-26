@@ -32,6 +32,7 @@ public class JB5Lambda1 {
 		Arrays.sort(items, (a, b) -> ESort(a, b));
 		
 		System.out.println(Arrays.toString(items));
+		
 
 	}
 
