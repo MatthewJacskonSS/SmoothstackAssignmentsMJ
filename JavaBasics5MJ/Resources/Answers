@@ -1,0 +1,56 @@
+Date Time API
+1.	 Which class would you use to store your birthday in years, months, days, seconds, and nanoseconds?
+	
+		LocalDateTime
+		
+2.	 Given a random date, how would you find the date of the previous Thursday?
+				DayofWeek datesDayOfWeek = DayOfweek.from(randomDate);
+				
+				long shift;
+				if (dayOfWeek.getValue() <= 4)
+					shift =  dayOfWeek.getValue() + 3;
+				shift =  dayOfWeek.getValue() -4;
+				
+				LocalDateTime previousThursday = randomDate.MinusDays(shift);
+
+3. What is the difference between a ZoneId and a ZoneOffset?
+		  zoneOffset is the ammount of time that a timezone differs from UTC time
+		  zoneID is a map of what are the correct ZoneOffsets to use for a timeZone taking into account things like daylight savings
+		  
+4.	How would you convert an Instant to a ZonedDateTime? How would you convert a ZonedDateTime to an Instant?
+			a. ZonedDateTime.ofInstant(instant x, ZoneID y);
+				or Instant.atZone(ZoneId x);
+			b. ZonedDateTime.toInstant();
+			
+5. Write an example that, for a given year, reports the length of each month within that year.
+	if (givenyear.isLeap() == true)
+		print leap year month lengths
+	else 
+		print normal month lengths
+	//else if
+	//	is historical
+	//		cry;
+
+6. Write an example that, for a given month of the current year, lists all of the Mondays in that month.
+	assuming given a Month
+	
+	 	System.out.println"For the month of ", month);
+	 	
+        LocalDate date = Year.now().atMonth(month).atDay(1).
+              with(TemporalAdjusters.firstInMonth(DayOfWeek.MONDAY));
+              
+        Month mi = date.getMonth();
+        
+        while (mi == month) {
+            System.out.println(date);
+            date = date.with(TemporalAdjusters.next(DayOfWeek.MONDAY));
+            mi = date.getMonth();
+            }
+            
+            
+ 7.	 Write an example that tests whether a given date occurs on Friday the 13th.
+            if(givenDate.getDayOfWeek() == FRIDAY && givenDate.getDayOfMonth() == 13)
+            	return true;
+            return false;
+ 
+		
